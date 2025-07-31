@@ -125,4 +125,4 @@ jobs:
       - name: Restart Glance Service
         run: |
           echo "Restarting Glance service on startbox to update config changes.."
-          ssh -o StrictHostKeyChecking=no root@start.remote.net "systemctl restart glance.service"
+          ssh -o StrictHostKeyChecking=no root@startbox.bruteware.cc "systemctl restart glance.service"
