@@ -16,5 +16,3 @@ pages:
                 links:
                   - title: Google
                     url: https://www.google.com/
-                  - title: Helper Scripts
-                    url: https://github.com/community-scripts/ProxmoxVE
