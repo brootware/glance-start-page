@@ -1,0 +1,123 @@
+---
+name: Format YAML
+
+# Configure when the workflow should run
+on:
+  push:
+    branches:
+      - main  # Adjust to your default branch (e.g., master) or add other branches
+  pull_request:
+    branches:
+      - main  # Adjust to your default branch (e.g., master)
+
+# Define the jobs that make up this workflow
+jobs:
+  # Job for checking the formatting of YAML and JSON files
+  check-format:
+    runs-on: ubuntu-latest  # Specify the runner environment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Action to check out your repository code
+
+      - name: Download yq (Go-based)
+        run: |
+          echo "--- Installing yq (Go-based) ---"
+          # Download the specific version of yq binary for Linux AMD64
+          # Check https://github.com/mikefarah/yq/releases for the latest stable version
+          YQ_VERSION="v4.42.1" # IMPORTANT: Update this to the latest stable yq version
+          wget https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64 -O /usr/local/bin/yq
+          chmod +x /usr/local/bin/yq # Make the binary executable
+
+      - name: Set up Node.js for Prettier
+        uses: actions/setup-node@v4  # Action to set up Node.js for Prettier
+        with:
+          node-version: '20'  # Use a recent LTS Node.js version
+
+      - name: Install Prettier
+        run: npm install -g prettier  # Install Prettier globally
+
+      - name: Check YAML formatting
+        run: |
+          echo "--- Checking YAML formatting ---"
+          FORMATTED_FILES=() # Array to store names of unformatted files
+          # Iterate through all YAML files
+          find . -name "*.yaml" -o -name "*.yml" | while read file; do
+            echo "Checking $file..."
+            # Apply formatting (sort keys) in-place.
+            # If the file was already formatted, this command won't change it.
+            yq -i e 'sort_keys(.)' "$file"
+            # Check if git detects any changes after applying formatting.
+            # If there are changes, the file was not properly formatted.
+            if ! git diff --quiet "$file"; then
+              FORMATTED_FILES+=("$file") # Add to the list of unformatted files
+            fi
+          done
+
+          # If any files were unformatted, print a message and exit with an error
+          if [ ${#FORMATTED_FILES[@]} -gt 0 ]; then
+            echo "::error::The following YAML files were not properly formatted:"
+            printf '%s\n' "${FORMATTED_FILES[@]}"
+            echo "Please run 'yq -i e 'sort_keys(.)' <file>' on these files locally to fix."
+            exit 1 # Fail the job
+          else
+            echo "All YAML files are properly formatted."
+          fi
+
+      - name: Check JSON formatting
+        run: |
+          echo "--- Checking JSON formatting ---"
+          FORMATTED_FILES=() # Array to store names of unformatted files
+          # Iterate through all JSON files
+          find . -name "*.json" | while read file; do
+            echo "Checking $file..."
+            # Apply Prettier formatting in-place.
+            prettier --write "$file"
+            # Check if git detects any changes after applying formatting.
+            if ! git diff --quiet "$file"; then
+              FORMATTED_FILES+=("$file") # Add to the list of unformatted files
+            fi
+          done
+
+          # If any files were unformatted, print a message and exit with an error
+          if [ ${#FORMATTED_FILES[@]} -gt 0 ]; then
+            echo "::error::The following JSON files were not properly formatted:"
+            printf '%s\n' "${FORMATTED_FILES[@]}"
+            echo "Please run 'prettier --write <file>' on these files locally to fix."
+            exit 1 # Fail the job
+          else
+            echo "All JSON files are properly formatted."
+          fi
+          
+  deploy:
+    # This job will only run if the 'ci' job from the 'ci.yml' workflow succeeds.
+    # Replace 'ci-job-name' with the actual name of the job in your ci.yml that needs to pass.
+    # For example, if your ci.yml has a job named 'build-and-test', you'd use 'needs: build-and-test'.
+    # If ci.yml has only one job and it's implicitly named, you might need to check Gitea's UI
+    # or the ci.yml file itself to find the correct job ID.
+    needs: [check-format]  # IMPORTANT: Replace 'ci-job-name' with the actual job name from your ci.yml
+    runs-on: ubuntu-latest  # Or your preferred runner environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up SSH Private Key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.ID_ED25519 }}  # Your SSH private key stored as a Gitea secret
+
+      - name: Add Remote Server to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan startbox.bruteware.cc >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+        # This step adds the remote server's public key to the known_hosts file,
+        # preventing interactive prompts during the SCP command.
+
+      - name: Deploy glance.yml to start page glance Server
+        run: |
+          echo "Deploying with latest commit changes..."
+          scp -o StrictHostKeyChecking=no glance.yml root@startbox.bruteware.cc:/opt/glance/glance.yml
+        # -o StrictHostKeyChecking=no is used here because we've already added the host to known_hosts.
+        # This ensures the SCP command doesn't prompt for host key verification again.
+        # Ensure the 'root' user has appropriate permissions on the remote server.
