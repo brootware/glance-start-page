@@ -104,7 +104,7 @@ jobs:
       - name: Set up SSH Private Key
         uses: webfactory/ssh-agent@v0.7.0
         with:
-          ssh-private-key: ${{ secrets.ID_ED25519 }}  # Your SSH private key stored as a Gitea secret
+          ssh-private-key: ${{ secrets.GIT_CI_KEY }}  # Your SSH private key stored as a Gitea secret
 
       - name: Add Remote Server to Known Hosts
         run: |
