@@ -99,7 +99,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 3
 
       - name: Set up SSH Private Key
         uses: webfactory/ssh-agent@v0.7.0
@@ -117,6 +119,9 @@ jobs:
       - name: Deploy glance.yml to start page glance Server
         run: |
           echo "Deploying with latest commit changes..."
+          echo "--- Diff for the last commit ---"
+          git diff HEAD^
+          echo "--------------------------------"
           scp -o StrictHostKeyChecking=no glance.yml root@startbox.bruteware.cc:/opt/glance/glance.yml
         # -o StrictHostKeyChecking=no is used here because we've already added the host to known_hosts.
         # This ensures the SCP command doesn't prompt for host key verification again.
