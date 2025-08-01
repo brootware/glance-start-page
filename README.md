@@ -1,4 +1,4 @@
-# glace-start-page
+# glance-start-page
 
 This repository includes configuration files for a CI/CD pipeline and a web page layout.
 
