@@ -17,8 +17,8 @@ pages:
               - url: https://github.com/community-scripts/ProxmoxVE/releases.atom
                 title: Proxmox Helper Scripts
                 limit: 4
-              - url: https://omgubuntu.co.uk/feed
-                title: OmgUbuntu
+              - url: https://blog.linuxmint.com/?feed=rss2
+                title: Linux Mint
                 limit: 4
 
       - size: full
