@@ -1,6 +1,6 @@
 ---
 pages:
-  - name: Home
+  - name: Startpage
     width: slim
     hide-desktop-navigation: false
     center-vertically: true
@@ -8,7 +8,7 @@ pages:
       - size: small
         widgets:
           - type: calendar
-            first-day-of-week: monday         
+            first-day-of-week: monday
       - size: full
         widgets:
           - type: search
@@ -23,7 +23,24 @@ pages:
             groups:
               - title: General
                 links:
-                  - title: Google
-                    url: https://www.google.com/
                   - title: Helper Scripts
                     url: https://github.com/community-scripts/ProxmoxVE
+          - type: monitor
+            cache: 1m
+            title: Services
+            sites:
+              - title: leo
+                # url: https://leo.bruteware.cc/
+                check-url: https://192.168.10.101:8006
+                allow-insecure: true
+                icon: di:proxmox
+              - title: pio
+                # url: https://pio.bruteware.cc/
+                check-url: https://192.168.10.102:8006
+                allow-insecure: true
+                icon: di:proxmox
+              - title: pio
+                # url: https://sue.bruteware.cc/
+                check-url: https://192.168.10.103:8006
+                allow-insecure: true
+                icon: di:proxmox
