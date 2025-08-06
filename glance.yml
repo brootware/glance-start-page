@@ -83,6 +83,10 @@ pages:
             markets:
               - symbol: SGX-O39
                 name: OCBC Bank
+              - symbol: SGX-D05
+                name: DBS Bank
+              - symbol: SGX-S68
+                name: Singapore Stock Exchange
               - symbol: AAPL
                 name: Apple
               - symbol: MSFT
