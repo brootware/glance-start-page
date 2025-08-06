@@ -72,6 +72,7 @@ pages:
               - type: reddit
                 subreddit: selfhosted
                 show-thumbnails: true
+
       - size: small
         widgets:
           - type: weather
@@ -85,7 +86,7 @@ pages:
                 name: OCBC Bank
               - symbol: SGX-D05
                 name: DBS Bank
-              - symbol: SGX-S68
+              - symbol: S68
                 name: Singapore Stock Exchange
               - symbol: AAPL
                 name: Apple
