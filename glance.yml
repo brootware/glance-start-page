@@ -38,6 +38,11 @@ pages:
             cache: 1m
             title: Services
             sites:
+              - title: traefik
+                url: https://traefik-dashboard.bruteware.cc/
+                check-url: http://192.168.10.177:443
+                allow-insecure: true
+                icon: di:traefik
               - title: leo
                 # url: https://leo.bruteware.cc/
                 check-url: https://192.168.10.101:8006
