@@ -82,11 +82,26 @@ pages:
                 check-url: http://192.168.10.246:8080
                 allow-insecure: true
                 icon: di:qbittorrent
+              - title: prowlarr
+                url: https://prowlarr.bruteware.cc/
+                check-url: http://192.168.10.246:9696
+                allow-insecure: true
+                icon: di:prowlarr
               - title: radarr
                 url: https://radarr.bruteware.cc/
                 check-url: http://192.168.10.246:7878
                 allow-insecure: true
                 icon: di:radarr
+              - title: sonarr
+                url: https://sonarr.bruteware.cc/
+                check-url: http://192.168.10.246:8989
+                allow-insecure: true
+                icon: di:sonarr
+              - title: jellyfin
+                url: https://jellyfin.bruteware.cc/
+                check-url: http://192.168.10.246:8096
+                allow-insecure: true
+                icon: di:jellyfin
           - type: group
             widgets:
               - type: reddit
