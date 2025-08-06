@@ -9,17 +9,20 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
-          - type: rss
+          - type: Tech Feed
             limit: 10
-            collapse-after: 3
+            collapse-after: 6
             cache: 12h
             feeds:
               - url: https://github.com/community-scripts/ProxmoxVE/releases.atom
                 title: Proxmox Helper Scripts
-                limit: 4
+                limit: 2
               - url: https://blog.linuxmint.com/?feed=rss2
                 title: Linux Mint
-                limit: 4
+                limit: 2
+              - url: https://www.omgubuntu.co.uk/feed
+                title: OmgUbuntu
+                limit: 2
 
       - size: full
         widgets:
