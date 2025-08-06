@@ -81,7 +81,7 @@ pages:
             units: metric
             hour-format: 24h
           - type: markets
-            symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
+            symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news/
             markets:
               - symbol: SGX-O39
                 name: OCBC Bank
