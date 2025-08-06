@@ -5,6 +5,10 @@ pages:
     hide-desktop-navigation: false
     center-vertically: true
     columns:
+      - size: small
+        widgets:
+          - type: calendar
+            first-day-of-week: monday         
       - size: full
         widgets:
           - type: search
