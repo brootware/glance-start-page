@@ -40,12 +40,13 @@ pages:
               - title: AnsibleRoleSearch
                 shortcut: "@ars"
                 url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
-          # - type: bookmarks
-          #   groups:
-          #     - title: General
-          #       links:
-          #         - title: Helper Scripts
-          #           url: https://github.com/community-scripts/ProxmoxVE
+          - type: rss
+            limit: 5
+            cache: 12h
+            feeds:
+              - url: https://git.bruteware.cc/gitadmin/glace-start-page.rss
+                title: Glance Start Page CICD pipeline
+                limit: 4
           - type: monitor
             cache: 1m
             title: Services
@@ -95,12 +96,14 @@ pages:
             units: metric
             hour-format: 24h
           - type: markets
-            chart-link-template: https://www.tradingview.com/chart/?symbol={SYMBOL}
+            # chart-link-template: https://www.tradingview.com/chart/?symbol={SYMBOL}
             markets:
               - symbol: SGX-O39
                 name: OCBC Bank
+                chart-link: https://www.tradingview.com/chart/?symbol=SGX:O39
               - symbol: D05
                 name: DBS Bank
+                # chart-link: https://www.tradingview.com/chart/?symbol=SGX:D05
               - symbol: S68
                 name: Singapore Stock Exchange
               - symbol: VOO
