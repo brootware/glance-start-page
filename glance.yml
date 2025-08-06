@@ -14,8 +14,8 @@ pages:
             collapse-after: 3
             cache: 12h
             feeds:
-              - url: https://selfh.st/rss/
-                title: selfh.st
+              - url: https://github.com/community-scripts/ProxmoxVE/releases.atom
+                title: Proxmox Helper Scripts
                 limit: 4
               - url: https://omgubuntu.co.uk/feed
                 title: OmgUbuntu
