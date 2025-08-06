@@ -49,3 +49,20 @@ pages:
                 # check-url: https://192.168.10.103:8006
                 allow-insecure: true
                 icon: di:gitea
+          - size: small
+            widgets:
+              - type: weather
+                location: Singapore, Singapore
+                units: metric
+                hour-format: 12h
+
+              - type: markets
+                markets:
+                  - symbol: O39
+                    name: OCBC Bank
+                  - symbol: NVDA
+                    name: NVIDIA
+                  - symbol: AAPL
+                    name: Apple
+                  - symbol: MSFT
+                    name: Microsoft
