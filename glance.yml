@@ -1,8 +1,8 @@
 ---
 pages:
-  - name: Startpage
+  - name: Home
     width: slim
-    hide-desktop-navigation: true
+    hide-desktop-navigation: false
     center-vertically: true
     columns:
       - size: full
@@ -21,5 +21,5 @@ pages:
                 links:
                   - title: Google
                     url: https://www.google.com/
-                  # - title: Helper Scripts
-                  #   url: https://github.com/community-scripts/ProxmoxVE
+                  - title: Helper Scripts
+                    url: https://github.com/community-scripts/ProxmoxVE
