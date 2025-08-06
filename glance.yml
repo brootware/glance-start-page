@@ -26,8 +26,8 @@ pages:
               - title: VirusTotal
                 shortcut: "@vtu"
                 url: https://www.virustotal.com/gui/search/{QUERY}
-              - title: AnsibleRoleSearch
-                url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
+              # - title: AnsibleRoleSearch
+              #   url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
 
           - type: bookmarks
             groups:
