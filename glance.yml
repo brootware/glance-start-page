@@ -10,6 +10,12 @@ pages:
         widgets:
           - type: search
             autofocus: true
+            search-engine: duckduckgo
+            new-tab: true
+            bangs:
+              - title: YouTube
+                shortcut: "@yt"
+                url: https://youtube.com/results?search_query={QUERY}
           - type: bookmarks
             groups:
               - title: General
