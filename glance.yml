@@ -100,7 +100,7 @@ pages:
             markets:
               - symbol: SGX-O39
                 name: OCBC Bank
-                chart-link: https://www.tradingview.com/chart/?symbol=SGX:O39
+                chart-link: https://www.tradingview.com/chart/?symbol=O39
               - symbol: D05
                 name: DBS Bank
                 # chart-link: https://www.tradingview.com/chart/?symbol=SGX:D05
