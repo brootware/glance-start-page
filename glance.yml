@@ -30,12 +30,12 @@ pages:
                 shortcut: "@ar"
                 url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
 
-          - type: bookmarks
-            groups:
-              - title: General
-                links:
-                  - title: Helper Scripts
-                    url: https://github.com/community-scripts/ProxmoxVE
+          # - type: bookmarks
+          #   groups:
+          #     - title: General
+          #       links:
+          #         - title: Helper Scripts
+          #           url: https://github.com/community-scripts/ProxmoxVE
 
           - type: monitor
             cache: 1m
