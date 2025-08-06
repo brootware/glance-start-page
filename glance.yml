@@ -40,13 +40,13 @@ pages:
               - title: AnsibleRoleSearch
                 shortcut: "@ars"
                 url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
-          - type: rss
-            limit: 5
-            cache: 12h
-            feeds:
-              - url: https://git.bruteware.cc/gitadmin/glace-start-page.rss
-                title: Glance Start Page CICD pipeline
-                limit: 4
+          # - type: rss
+          #   limit: 5
+          #   cache: 12h
+          #   feeds:
+          #     - url: https://git.bruteware.cc/gitadmin/glace-start-page.rss
+          #       title: Glance Start Page CICD pipeline
+          #       limit: 4
           - type: monitor
             cache: 1m
             title: Services
