@@ -77,6 +77,16 @@ pages:
                 check-url: http://192.168.10.138:3000
                 allow-insecure: true
                 icon: di:gitea
+              - title: torrent
+                url: https://torrent.bruteware.cc/
+                check-url: http://192.168.10.246:8080
+                allow-insecure: true
+                icon: di:qbittorrent
+              - title: radarr
+                url: https://radarr.bruteware.cc/
+                check-url: http://192.168.10.246:7878
+                allow-insecure: true
+                icon: di:radarr
           - type: group
             widgets:
               - type: reddit
