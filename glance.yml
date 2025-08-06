@@ -24,10 +24,11 @@ pages:
                 shortcut: "@yc"
                 url: https://you.com/search?q={QUERY}&tbm=youchat&cfr=chat
               - title: VirusTotal
-                shortcut: "@vtu"
+                shortcut: "@vt"
                 url: https://www.virustotal.com/gui/search/{QUERY}
-              # - title: AnsibleRoleSearch
-              #   url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
+              - title: AnsibleRoleSearch
+                shortcut: "@ar"
+                url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
 
           - type: bookmarks
             groups:
