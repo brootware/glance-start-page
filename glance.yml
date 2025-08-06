@@ -2,7 +2,7 @@
 pages:
   - name: Startpage
     width: slim
-    hide-desktop-navigation: false
+    hide-desktop-navigation: true
     center-vertically: true
     columns:
       - size: small
@@ -26,6 +26,7 @@ pages:
                 links:
                   - title: Helper Scripts
                     url: https://github.com/community-scripts/ProxmoxVE
+          
           - type: monitor
             cache: 1m
             title: Services
@@ -47,7 +48,7 @@ pages:
                 icon: di:proxmox
               - title: git
                 url: https://git.bruteware.cc/
-                # check-url: https://192.168.10.103:8006
+                check-url: http://192.168.10.138:3000
                 allow-insecure: true
                 icon: di:gitea
 
