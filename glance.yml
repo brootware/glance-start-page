@@ -9,23 +9,6 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
-          - type: weather
-            location: Singapore, Singapore
-            units: metric
-            hour-format: 24h
-          - type: markets
-            symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
-            markets:
-              - symbol: SGX-O39
-                name: OCBC Bank
-              - symbol: SGX-D05
-                name: DBS Bank
-              - symbol: SGX-S68
-                name: Singapore Stock Exchange
-              - symbol: AAPL
-                name: Apple
-              - symbol: MSFT
-                name: Microsoft
 
       - size: full
         widgets:
@@ -89,3 +72,22 @@ pages:
               - type: reddit
                 subreddit: selfhosted
                 show-thumbnails: true
+      - size: small
+        widgets:
+          - type: weather
+            location: Singapore, Singapore
+            units: metric
+            hour-format: 24h
+          - type: markets
+            symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
+            markets:
+              - symbol: SGX-O39
+                name: OCBC Bank
+              - symbol: SGX-D05
+                name: DBS Bank
+              - symbol: SGX-S68
+                name: Singapore Stock Exchange
+              - symbol: AAPL
+                name: Apple
+              - symbol: MSFT
+                name: Microsoft
