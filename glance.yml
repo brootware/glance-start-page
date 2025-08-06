@@ -9,12 +9,10 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
-      - size: small
-        widgets:
-          # - type: weather
-          #   location: Singapore, Singapore
-          #   units: metric
-          #   hour-format: 24h
+          - type: weather
+            location: Singapore, Singapore
+            units: metric
+            hour-format: 24h
           - type: markets
             symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news
             markets:
@@ -28,6 +26,7 @@ pages:
                 name: Apple
               - symbol: MSFT
                 name: Microsoft
+
       - size: full
         widgets:
           - type: search
