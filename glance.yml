@@ -9,7 +9,6 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
-
       - size: full
         widgets:
           - type: search
@@ -29,14 +28,12 @@ pages:
               - title: AnsibleRoleSearch
                 shortcut: "@ars"
                 url: https://galaxy.ansible.com/ui/standalone/roles/?page=1&page_size=10&sort=-download_count&keywords={QUERY}
-
           # - type: bookmarks
           #   groups:
           #     - title: General
           #       links:
           #         - title: Helper Scripts
           #           url: https://github.com/community-scripts/ProxmoxVE
-
           - type: monitor
             cache: 1m
             title: Services
@@ -61,7 +58,6 @@ pages:
                 check-url: http://192.168.10.138:3000
                 allow-insecure: true
                 icon: di:gitea
-
           - type: group
             widgets:
               - type: reddit
@@ -71,19 +67,19 @@ pages:
                 subreddit: selfhosted
                 show-thumbnails: true
 
-      # - size: small
-      #   widgets:
-      #     - type: weather
-      #       location: Singapore, Singapore
-      #       units: metric
-      #       hour-format: 12h
-      #     - type: markets
-      #       markets:
-      #         - symbol: O39
-      #           name: OCBC Bank
-      #         - symbol: NVDA
-      #           name: NVIDIA
-      #         - symbol: AAPL
-      #           name: Apple
-      #         - symbol: MSFT
-      #           name: Microsoft
+      - size: small
+        widgets:
+          - type: weather
+            location: Singapore, Singapore
+            units: metric
+            hour-format: 12h
+          # - type: markets
+          #   markets:
+          #     - symbol: O39
+          #       name: OCBC Bank
+          #     - symbol: NVDA
+          #       name: NVIDIA
+          #     - symbol: AAPL
+          #       name: Apple
+          #     - symbol: MSFT
+          #       name: Microsoft
