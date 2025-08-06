@@ -39,8 +39,13 @@ pages:
                 check-url: https://192.168.10.102:8006
                 allow-insecure: true
                 icon: di:proxmox
-              - title: pio
+              - title: sue
                 # url: https://sue.bruteware.cc/
                 check-url: https://192.168.10.103:8006
                 allow-insecure: true
                 icon: di:proxmox
+              - title: git
+                url: https://git.bruteware.cc/
+                # check-url: https://192.168.10.103:8006
+                allow-insecure: true
+                icon: di:gitea
