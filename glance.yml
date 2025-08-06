@@ -9,6 +9,17 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 12h
+            feeds:
+              - url: https://selfh.st/rss/
+                title: selfh.st
+                limit: 4
+              - url: https://omgubuntu.co.uk/feed
+                title: OmgUbuntu
+                limit: 4
 
       - size: full
         widgets:
@@ -73,6 +84,9 @@ pages:
               - type: reddit
                 subreddit: selfhosted
                 show-thumbnails: true
+              - type: reddit
+                subreddit: technology
+                show-thumbnails: true
 
       - size: small
         widgets:
@@ -81,7 +95,7 @@ pages:
             units: metric
             hour-format: 24h
           - type: markets
-            symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news/
+            # symbol-link-template: https://www.tradingview.com/symbols/{SYMBOL}/news/
             markets:
               - symbol: SGX-O39
                 name: OCBC Bank
