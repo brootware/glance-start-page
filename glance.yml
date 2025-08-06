@@ -58,21 +58,21 @@ pages:
             sites:
               - title: traefik
                 url: https://traefik-dashboard.bruteware.cc/
-                check-url: http://192.168.10.177:443
+                check-url: https://traefik-dashboard.bruteware.cc/
                 allow-insecure: true
                 icon: di:traefik
               - title: leo
-                # url: https://leo.bruteware.cc/
+                url: https://192.168.10.101:8006
                 check-url: https://192.168.10.101:8006
                 allow-insecure: true
                 icon: di:proxmox
               - title: pio
-                # url: https://pio.bruteware.cc/
+                url: https://192.168.10.102:8006
                 check-url: https://192.168.10.102:8006
                 allow-insecure: true
                 icon: di:proxmox
               - title: sue
-                # url: https://sue.bruteware.cc/
+                url: https://192.168.10.103:8006
                 check-url: https://192.168.10.103:8006
                 allow-insecure: true
                 icon: di:proxmox
