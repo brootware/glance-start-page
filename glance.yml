@@ -20,13 +20,20 @@ pages:
               - title: YouTube
                 shortcut: "@yt"
                 url: https://youtube.com/results?search_query={QUERY}
+              - title: YouChat
+                shortcut: "@yc"
+                url: https://you.com/search?q={QUERY}&tbm=youchat&cfr=chat
+              - title: VirusTotal
+                shortcut: "@vtu"
+                url: https://www.virustotal.com/gui/search/{QUERY}
+
           - type: bookmarks
             groups:
               - title: General
                 links:
                   - title: Helper Scripts
                     url: https://github.com/community-scripts/ProxmoxVE
-          
+
           - type: monitor
             cache: 1m
             title: Services
