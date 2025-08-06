@@ -9,7 +9,8 @@ pages:
         widgets:
           - type: calendar
             first-day-of-week: monday
-          - type: RSS
+          - type: rss
+            title: Tech Feed
             limit: 10
             collapse-after: 6
             cache: 12h
