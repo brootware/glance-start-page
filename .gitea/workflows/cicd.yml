@@ -89,11 +89,6 @@ jobs:
           fi
           
   deploy:
-    # This job will only run if the 'ci' job from the 'ci.yml' workflow succeeds.
-    # Replace 'ci-job-name' with the actual name of the job in your ci.yml that needs to pass.
-    # For example, if your ci.yml has a job named 'build-and-test', you'd use 'needs: build-and-test'.
-    # If ci.yml has only one job and it's implicitly named, you might need to check Gitea's UI
-    # or the ci.yml file itself to find the correct job ID.
     needs: [check-format]  # IMPORTANT: Replace 'ci-job-name' with the actual job name from your ci.yml
     runs-on: ubuntu-latest  # Or your preferred runner environment
 
