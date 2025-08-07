@@ -1,6 +1,7 @@
 # glance-start-page
 
-This repository includes configuration files for a CI/CD pipeline and a web page layout.
+This repository includes configuration files for a CI/CD pipeline and a customized (to my liking) glance homepage layout.
+![start](./images/homepage.png)
 
 ## CI/CD Pipeline (`.gitea/workflows/cicd.yml`)
 The CI/CD pipeline is set up using GitHub Actions. It ensures that YAML and JSON files are properly formatted whenever code changes are pushed to the main branch or when pull requests are created against it. The pipeline involves:
