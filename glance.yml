@@ -53,7 +53,7 @@ pages:
           #       limit: 4
           - type: monitor
             cache: 1m
-            title: Services
+            title: Infrastructure
             sites:
               - title: traefik
                 url: https://traefik-dashboard.bruteware.cc/
@@ -81,6 +81,10 @@ pages:
                 check-url: http://192.168.10.138:3000
                 allow-insecure: true
                 icon: di:gitea
+          - type: monitor
+            cache: 1m
+            title: Media Services
+            sites:
               - title: torrent
                 url: https://torrent.bruteware.cc/
                 check-url: http://192.168.10.246:8080
