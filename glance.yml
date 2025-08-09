@@ -110,6 +110,11 @@ pages:
                 check-url: http://192.168.10.246:8096
                 allow-insecure: true
                 icon: di:jellyfin
+              - title: jellyseerr
+                url: https://jellyseerr.bruteware.cc/
+                check-url: http://192.168.10.246:5055
+                allow-insecure: true
+                icon: di:jellyfin
           - type: group
             widgets:
               - type: reddit
