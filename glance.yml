@@ -62,23 +62,23 @@ pages:
                 icon: di:traefik
                 alt-status-codes: [401]
               - title: leo
-                url: https://192.168.10.101:8006
-                check-url: https://192.168.10.101:8006
+                url: https://192.168.10.11:8006
+                check-url: https://192.168.10.11:8006
                 allow-insecure: true
                 icon: di:proxmox
               - title: pio
-                url: https://192.168.10.102:8006
-                check-url: https://192.168.10.102:8006
+                url: https://192.168.10.12:8006
+                check-url: https://192.168.10.12:8006
                 allow-insecure: true
                 icon: di:proxmox
               - title: sue
-                url: https://192.168.10.103:8006
-                check-url: https://192.168.10.103:8006
+                url: https://192.168.10.13:8006
+                check-url: https://192.168.10.13:8006
                 allow-insecure: true
                 icon: di:proxmox
               - title: git
                 url: https://git.bruteware.cc/
-                check-url: http://192.168.10.138:3000
+                check-url: http://192.168.10.103:3000
                 allow-insecure: true
                 icon: di:gitea
           - type: monitor
@@ -87,32 +87,32 @@ pages:
             sites:
               - title: torrent
                 url: https://torrent.bruteware.cc/
-                check-url: http://192.168.10.246:8080
+                check-url: http://192.168.10.220:8080
                 allow-insecure: true
                 icon: di:qbittorrent
               - title: prowlarr
                 url: https://prowlarr.bruteware.cc/
-                check-url: http://192.168.10.246:9696
+                check-url: http://192.168.10.220:9696
                 allow-insecure: true
                 icon: di:prowlarr
               - title: radarr
                 url: https://radarr.bruteware.cc/
-                check-url: http://192.168.10.246:7878
+                check-url: http://192.168.10.220:7878
                 allow-insecure: true
                 icon: di:radarr
               - title: sonarr
                 url: https://sonarr.bruteware.cc/
-                check-url: http://192.168.10.246:8989
+                check-url: http://192.168.10.220:8989
                 allow-insecure: true
                 icon: di:sonarr
               - title: jellyfin
                 url: https://jellyfin.bruteware.cc/
-                check-url: http://192.168.10.246:8096
+                check-url: http://192.168.10.220:8096
                 allow-insecure: true
                 icon: di:jellyfin
               - title: jellyseerr
                 url: https://jellyseerr.bruteware.cc/
-                check-url: http://192.168.10.246:5055
+                check-url: http://192.168.10.220:5055
                 allow-insecure: true
                 icon: di:jellyfin
           - type: group
