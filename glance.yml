@@ -78,7 +78,7 @@ pages:
                 icon: di:proxmox
               - title: git
                 url: https://git.bruteware.cc/
-                check-url: http://192.168.10.103:3000
+                check-url: http://192.168.10.106:3000
                 allow-insecure: true
                 icon: di:gitea
           - type: monitor
