@@ -81,6 +81,11 @@ pages:
                 check-url: http://192.168.10.106:3000
                 allow-insecure: true
                 icon: di:gitea
+              - title: ansible
+                url: https://ansible.bruteware.cc/
+                check-url: http://192.168.10.223:3000
+                allow-insecure: true
+                icon: di:ansible
           - type: monitor
             cache: 1m
             title: Media Services
