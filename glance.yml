@@ -90,7 +90,7 @@ pages:
                 url: https://pdm.bruteware.cc:8443
                 check-url: https://pdm.bruteware.cc:8443
                 allow-insecure: true
-                icon: data center
+                icon: di:data-center
           - type: monitor
             cache: 1m
             title: Media Services
