@@ -160,3 +160,5 @@ pages:
                 name: Apple
               - symbol: MSFT
                 name: Microsoft
+              - symbol: ESTC
+                name: Elastic
