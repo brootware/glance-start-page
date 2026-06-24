@@ -83,7 +83,7 @@ pages:
                 icon: di:gitea
               - title: ansible
                 url: https://ansible.bruteware.cc/
-                check-url: http://192.168.10.223:3000
+                check-url: http://192.168.10.234:443
                 allow-insecure: true
                 icon: di:ansible
               - title: proxmox datacenter
@@ -116,12 +116,12 @@ pages:
                 allow-insecure: true
                 icon: di:sonarr
               - title: jellyfin
-                url: https://jellyfin.bruteware.cc/
+                url: https://jf.bruteware.cc/
                 check-url: http://192.168.10.220:8096
                 allow-insecure: true
                 icon: di:jellyfin
               - title: jellyseerr
-                url: https://jellyseerr.bruteware.cc/
+                url: https://jseerr.bruteware.cc/
                 check-url: http://192.168.10.220:5055
                 allow-insecure: true
                 icon: di:jellyfin
