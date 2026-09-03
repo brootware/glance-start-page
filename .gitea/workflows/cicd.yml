@@ -117,7 +117,7 @@ jobs:
           echo "--- Diff for the last commit ---"
           git diff HEAD^
           echo "--------------------------------"
-          scp -o StrictHostKeyChecking=no glance.yml root@startbox.bruteware.cc:/opt/glance/glance.yml
+          scp -o StrictHostKeyChecking=no glance.yml root@startbox.bruteware.cc:/opt/glance_data/glance.yml
         # -o StrictHostKeyChecking=no is used here because we've already added the host to known_hosts.
         # This ensures the SCP command doesn't prompt for host key verification again.
         # Ensure the 'root' user has appropriate permissions on the remote server.
