@@ -15,3 +15,17 @@ This file is likely used as configuration for an application or service, possibl
 - Page dimensions.
 - Navigation settings.
 - Widgets like search and bookmarks.
+
+### For icons
+
+Usage example:
+
+```markdown
+icon: si:immich # si for Simple icons https://simpleicons.org/
+icon: sh:immich # sh for selfh.st icons https://selfh.st/icons/
+icon: di:immich # di for Dashboard icons https://github.com/homarr-labs/dashboard-icons
+icon: mdi:camera # mdi for Material Design icons https://pictogrammers.com/library/mdi/
+```
+
+Check out https://github.com/glanceapp/glance/blob/main/docs/configuration.md#icons
+
