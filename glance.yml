@@ -80,7 +80,7 @@ pages:
                 url: https://gamingpc.bruteware.cc:47990
                 check-url: https://192.168.123.7:47990
                 allow-insecure: true
-                icon: di:pcgamingwiki
+                icon: di:556DB3
                 alt-status-codes: [401,403]
               - title: git
                 url: https://git.bruteware.cc/
