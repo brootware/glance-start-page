@@ -77,8 +77,8 @@ pages:
                 allow-insecure: true
                 icon: di:proxmox
               - title: gamingpc
-                url: https://gamingpc.bruteware.cc:47990/
-                check-url: https://gamingpc.bruteware.cc:47990/
+                url: https://gamingpc.bruteware.cc:47990
+                check-url: https://192.168.123.7:47990
                 allow-insecure: true
                 icon: di:PCGamingWiki
               - title: git
